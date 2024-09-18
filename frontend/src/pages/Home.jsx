@@ -42,7 +42,7 @@ const Home = () => {
 
       {/* Why choose us */}
       <div className='min-h-[45rem] pt-20 bg-gray-100'>
-        <h1 className='text-center text-6xl text-[#cfb12c] font-semibold tracking-normal mb-10'>
+        <h1 className='text-center text-4xl md:text-6xl text-[#cfb12c] font-semibold tracking-normal mb-10'>
           WHY CHOOSE US
         </h1>
         <div className='flex flex-col md:flex-row items-center justify-center mx-auto gap-x-10 gap-y-5'>

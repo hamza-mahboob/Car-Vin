@@ -7,6 +7,7 @@ import {
     IconButton,
     Collapse,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export function NavbarDefault() {
     const [openNav, setOpenNav] = React.useState(false);
@@ -39,9 +40,9 @@ export function NavbarDefault() {
                     />
                 </svg>
 
-                <a href="#" className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
+                <Link to={'/'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
                     Home
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -63,9 +64,9 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <a href="#" className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
+                <Link to={'/pricing'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
                     Pricing
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -85,9 +86,9 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <a href="#" className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
+                <Link to={'/sampleReport'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
                     Sample Report
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -109,9 +110,9 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <a href="#" className="flex items-center text-white text-lg font-bold hover:underline hover:text-[#caa430]">
+                <Link to={'/orderCancel'} className="flex items-center text-white text-lg font-bold hover:underline hover:text-[#caa430]">
                     Order Cancel
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -133,9 +134,9 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <a href="#" className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
+                <Link to={'/policies'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#caa430]">
                     Policies
-                </a>
+                </Link>
             </Typography>
         </ul>
     );
