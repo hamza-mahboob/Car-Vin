@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, CardBody, Typography, Avatar } from "@material-tailwind/react";
 import Pricing from '../components/Pricing';
+import { useLocation } from 'react-router-dom';
 
 const customers = [
     {
@@ -42,6 +43,8 @@ const customers = [
 ];
 
 export const VinResultDisplay = () => {
+    const { json } = useLocation();
+
     return (
         <>
             <div className="h-screen mt-20 pb-20 flex items-center justify-center p-3">
@@ -53,7 +56,7 @@ export const VinResultDisplay = () => {
                             </Typography>
                         </div>
                         <div className="divide-y divide-gray-200">
-                            {customers.map(({ name, details }, index) => (
+                            {json && json.map(({ name, details }, index) => (
                                 <div
                                     key={index}
                                     className="flex items-center justify-between pb-3 pt-3 last:pb-0"
@@ -71,6 +74,7 @@ export const VinResultDisplay = () => {
                                     </Typography>
                                 </div>
                             ))}
+                            {!json && <div className='text-red-500 text-xl'>There was an error fetching data...</div>}
                         </div>
                     </CardBody>
                 </Card>

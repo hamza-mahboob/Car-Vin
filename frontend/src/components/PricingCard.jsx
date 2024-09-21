@@ -28,7 +28,7 @@ function CheckIcon() {
 
 export function PricingCard({ price, title, features }) {
     return (
-        <Card variant="filled" className="w-full max-w-[25rem] mx-auto p-8 bg-[#caa430]">
+        <Card variant="filled" className="w-full max-w-[25rem] mx-auto p-8 bg-[#8983ff]">
             <CardHeader
                 floated={false}
                 shadow={false}
