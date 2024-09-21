@@ -40,22 +40,84 @@ const customers = [
         name: "Plant State:",
         details: 'null',
     },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
+    {
+        name: "Plant State:",
+        details: 'null',
+    },
 ];
 
 export const VinResultDisplay = () => {
-    const { json } = useLocation();
+    const { state } = useLocation();
+    const { json } = state || {};
 
     return (
         <>
+            {console.log(json)}
             <div className="h-screen mt-20 pb-20 flex items-center justify-center p-3">
-                <Card className="w-[30rem] bg-gray-100">
+                <Card className="w-[35rem] bg-gray-100">
                     <CardBody>
                         <div className="mb-4 flex items-center justify-between">
                             <Typography variant="h2" color="blue-gray" className="">
                                 VIN Details
                             </Typography>
                         </div>
-                        <div className="divide-y divide-gray-200">
+                        <div className="divide-y divide-gray-200 overflow-y-scroll max-h-96 md:max-h-[35rem] p-3">
                             {json && json.map(({ name, details }, index) => (
                                 <div
                                     key={index}

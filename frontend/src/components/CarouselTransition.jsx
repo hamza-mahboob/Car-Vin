@@ -18,7 +18,7 @@ export function CarouselTransition() {
     setDisabled(true)
 
     try {
-      const response = await fetch('http://localhost:8000', {
+      const response = await fetch('http://carfaxchecks.test/api/vin/info', {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(input)
@@ -28,7 +28,7 @@ export function CarouselTransition() {
 
       if (response.ok) {
         // navigate to vin car details
-        navigate('/vin', { json });
+        navigate('/vin', { state: { json } });
       }
 
 
@@ -43,6 +43,7 @@ export function CarouselTransition() {
         text: "Something went wrong!",
       });
       console.log('fetch error')
+
     } finally {
       setDisabled(false)
     }
