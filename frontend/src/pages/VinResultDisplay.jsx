@@ -108,16 +108,16 @@ export const VinResultDisplay = () => {
 
     return (
         <>
-            {console.log(json)}
-            <div className="h-screen mt-20 pb-20 flex items-center justify-center p-3">
-                <Card className="w-[35rem] bg-gray-100">
+            {/* {console.log(json)} */}
+            <div className="h-screen pt-20 pb-20 flex items-center justify-center p-5 rounded-2xl">
+                {/* <Card className="w-full m-10 bg-indigo-200 p-2 h-5/6">
                     <CardBody>
                         <div className="mb-4 flex items-center justify-between">
                             <Typography variant="h2" color="blue-gray" className="">
                                 VIN Details
                             </Typography>
                         </div>
-                        <div className="divide-y divide-gray-200 overflow-y-scroll max-h-96 md:max-h-[35rem] p-3">
+                        <div className={`divide-y divide-gray-200 ${json && 'overflow-y-scroll'} max-h-96 md:max-h-[35rem] p-3`}>
                             {json && json.map(({ name, details }, index) => (
                                 <div
                                     key={index}
@@ -139,7 +139,36 @@ export const VinResultDisplay = () => {
                             {!json && <div className='text-red-500 text-xl'>There was an error fetching data...</div>}
                         </div>
                     </CardBody>
+                </Card> */}
+                <Card className={`h-full w-full ${json && 'overflow-y-scroll'} overflow-x-hidden p-5 mt-20`}>
+                    <table className="w-full table-fixed min-w-max text-left">
+                        <tbody>
+                            <h1 className="text-3xl w-full md:text-5xl font-semibold m-5 text-[#8983ff] tracking-wider" style={{ fontFamily: "Dancing Script" }}>
+                                Vin Details
+                            </h1>
+                            {json && json.map(({ name, details }) => (
+                                <tr key={name} className="even:bg-[#8983ff]/20 odd:bg-[#8983ff]/50">
+                                    <td className="p-4 rounded-l-md">
+                                        <Typography variant="h5" color="blue-gray" className="font-normal">
+                                            {name}
+                                        </Typography>
+                                    </td>
+                                    <td className="p-4 rounded-r-md">
+                                        <Typography variant="h5" color="blue-gray" className="font-normal truncate">
+                                            {details}
+                                        </Typography>
+                                    </td>
+                                </tr>
+                            ))}
+                            {!json && (
+                                <h1 className="text-red-500 mx-auto text-xl md:text-2xl text-center">
+                                    There was an error fetching data...
+                                </h1>
+                            )}
+                        </tbody>
+                    </table>
                 </Card>
+
             </div>
             <Pricing />
         </>

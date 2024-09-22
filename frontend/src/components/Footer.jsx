@@ -1,13 +1,14 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const LINKS = [
     {
         title: "Quick Links",
-        items: ["Home", "Pricing", "Sample Report", "Policies"],
+        items: [["Home", '/'], ["Pricing", '/pricing'], ["Sample Report", 'sampleReport'], ["Policies", '/policies']],
     },
     {
         title: "Useful links",
-        items: ["Cancel Order"],
+        items: [["Cancel Order",'/orderCancel']],
     },
 ];
 
@@ -40,11 +41,12 @@ export function Footer() {
                                     <li key={link}>
                                         <Typography
                                             as="a"
-                                            href="#"
                                             color="white"
-                                            className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                                            className="py-1.5 font-normal transition-colors hover:text-[#5d55f0]"
                                         >
-                                            {link}
+                                            <Link to={link[1]}>
+                                                {link[0]}
+                                            </Link>
                                         </Typography>
                                     </li>
                                 ))}
@@ -67,7 +69,7 @@ export function Footer() {
                         variant="small"
                         className="mb-4 text-center font-normal text-gray-300 md:mb-0"
                     >
-                        &copy; {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
+                        &copy; {currentYear} <a href="#">CarFaxChecks</a>. All
                         Rights Reserved.
                     </Typography>
                     <div className="flex gap-4 text-gray-300 sm:justify-center">

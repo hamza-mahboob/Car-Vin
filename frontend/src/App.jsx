@@ -3,13 +3,14 @@ import { NavbarDefault } from './components/NavbarDefault'
 import Home from './pages/Home'
 import { Footer } from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import { PricingPage } from './pages/PricingPage'
 import { SampleReport } from './pages/SampleReport'
 import { OrderCancel } from './pages/OrderCancel'
 import { Policies } from './pages/Policies'
 import { VinResultDisplay } from './pages/VinResultDisplay'
+import { Buy } from './pages/Buy'
 import './App.css'
-import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,10 +26,10 @@ function App() {
     <>
       {loading ?
         <div className="loader">
-          <svg className="car" width="204" height="80" viewBox="0 0 102 40" xmlns="http://www.w3.org/2000/svg">
+          <svg className="car" width="204" height="80" viewBox="0 0 102 40" xmlns="http://www.w3.org/2000/svg" >
             <g
               transform="translate(2 1)"
-              stroke="#002742"
+              stroke="#5d55f0"
               fill="none"
               fillRule="evenodd"
               strokeLinecap="round"
@@ -76,9 +77,9 @@ function App() {
           </svg>
         </div>
         :
-        < div className='bg-gradient-to-r from-[#1d1e22] to-[#393f4d] h-screen' >
-          <NavbarDefault />
+        < div className='h-screen' >
           <ScrollToTop />
+          <NavbarDefault />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/pricing' element={<PricingPage />} />
@@ -86,6 +87,7 @@ function App() {
             <Route path='/orderCancel' element={<OrderCancel />} />
             <Route path='/policies' element={<Policies />} />
             <Route path='/vin' element={<VinResultDisplay />} />
+            <Route path='/buy' element={<Buy />} />
           </Routes>
           <Footer />
         </div >}

@@ -1,4 +1,3 @@
-
 .loader {
     height: 100vh;
     display: flex;
@@ -15,6 +14,7 @@
     stroke-dasharray: 22;
     animation: line 0.8s ease-in-out infinite;
     animation-fill-mode: both;
+   
   }
   
   .car__line--top {
@@ -62,5 +62,26 @@
     100% {
       stroke-dashoffset: -22;
     }
+  }
+  
+  .wrapper {
+    display: flex;
+  }
+  
+  .inner {
+    max-height: 12rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  
+  .wrapper .inner:hover {
+    max-height: 100%;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
   }
   

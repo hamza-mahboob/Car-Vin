@@ -1,4 +1,4 @@
-import { Button, Carousel, Input } from "@material-tailwind/react";
+import { Button, Carousel, Input, Spinner } from "@material-tailwind/react";
 import vid from '../assets/car vid.mp4'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -35,14 +35,14 @@ export function CarouselTransition() {
     } catch (error) {
       //there was an error
 
-      console.log(error)
+      // console.log(error)
 
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Something went wrong!",
       });
-      console.log('fetch error')
+      // console.log('fetch error')
 
     } finally {
       setDisabled(false)
@@ -59,6 +59,7 @@ export function CarouselTransition() {
           </div>
           <h1 className="my-4 text-center text-gray-500 font-medium">Example: 1VXBR12EXCP901213</h1>
           <Button variant="filled" className="mt-10 w-40  mx-auto text-white bg-[#8983ff] hover:bg-[#5b52fe]" onClick={handleClick} disabled={disabled}>Decode</Button>
+          {disabled && <Spinner color="indigo" className="mx-auto my-5 h-10 w-10" />}
         </div>
       </div>
       {/* <Carousel transition={{ duration: 1 }} className="rounded-xl h-screen" autoplay={true} loop={true} prevArrow={false} nextArrow={false} >
@@ -78,7 +79,7 @@ export function CarouselTransition() {
           className="h-full w-full object-cover"
         />
       </Carousel> */}
-      <video width="100%" className="h-screen w-full rounded object-fill blur-sm" autoPlay loop muted={true}>
+      <video width="100%" className="h-screen w-full rounded object-cover md:object-fill blur-sm" autoPlay loop muted={true}>
         <source src={vid} type="video/mp4" />
         Sorry, your browser doesn't support videos.
       </video>

@@ -142,11 +142,11 @@ export function NavbarDefault() {
     );
 
     return (
-        <Navbar className="mx-auto w-full px-4 py-2 lg:px-8 lg:py-4 bg-black border-none opacity-[0.98] fixed top-0 z-50" fullWidth={true}>
+        <Navbar className="mx-auto w-full  px-4 py-2 lg:px-8 lg:py-4 bg-black border-none opacity-[0.98] fixed top-0 z-50" fullWidth={true}>
             <div className="mx-auto flex items-center justify-between text-white">
                 <Typography
                     as="a"
-                    href="#"
+                    href="/"
                     className="mr-4 cursor-pointer py-1.5 font-bold text-5xl tracking-widest italic text-[#8983ff]"
                     style={{fontFamily:'Dancing Script'}}
                 >

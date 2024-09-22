@@ -71,9 +71,9 @@ const Pricing = () => {
     ];
 
     return (
-        <div className='bg-blue-gray-50 pt-32 min-h-screen'>
+        <div className='bg-blue-gray-50 py-32 h-auto'>
             <h1 className='text-5xl text-center font-semibold tracking-wider text-gray-900'>OUR PRICING</h1>
-            <div className="flex flex-wrap gap-10 p-5 w-full mt-8">
+            <div className="flex flex-wrap xl:flex-nowrap gap-10 p-5 w-full mt-8">
                 {pricingData.map((plan, index) => (
                     <PricingCard
                         key={index}

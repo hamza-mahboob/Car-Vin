@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { CarouselTransition } from '../components/CarouselTransition'
 import Pricing from '../components/Pricing'
 import Welcome from '../components/Welcome'
 import Features from '../components/Features'
 import { Button } from '@material-tailwind/react'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate()
 
   const features = [
     { name: 'Free Photo', carvin: true, carfax: false, uvip: false, vehicleSnap: false },
@@ -99,7 +101,7 @@ const Home = () => {
       </div>
 
       {/* For your info */}
-      <div className='min-h-[45rem] flex flex-col md:flex-row max-w-screen-xl mx-auto justify-center items-center mt-20'>
+      <div className='min-h-[45rem] flex flex-col md:flex-row max-w-screen-xl mx-auto justify-center items-center mt-20 p-2'>
         <h1 className='text-4xl tracking-tighter w-full md:w-1/3 font-bold text-center md:text-start mb-10'>FOR YOUR INFO</h1>
         <div className='w-full md:w-2/3 p-2 grid grid-cols-2 gap-10 text-gray-700 tracking-wider'>
           <div>
@@ -116,7 +118,7 @@ const Home = () => {
           </div>
           <div>
             <h1 className='mb-5 text-xl text-[#8983ff] font-semibold'>04 Buy Now</h1>
-            <Button className='w-full h-14 bg-[#8983ff]'>Buy Now</Button>
+            <Button className='w-full h-14 bg-[#8983ff]' onClick={() => navigate('/pricing')}>Buy Now</Button>
           </div>
         </div>
       </div>
