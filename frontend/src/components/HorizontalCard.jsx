@@ -8,7 +8,7 @@ import {
 
 export function HorizontalCard({ image, title, subtitle, description, link }) {
   return (
-    <Card className="w-full max-w-[48rem] flex-row bg-[#393f4d] shadow-2xl">
+    <Card className="w-full max-w-[48rem] flex-row bg-[#8983ff] shadow-2xl">
       <CardHeader
         shadow={false}
         floated={false}
@@ -27,7 +27,7 @@ export function HorizontalCard({ image, title, subtitle, description, link }) {
         <Typography variant="h4" color="white" className="my-9 text-center md:text-start text-2xl md:text-4xl">
           {title}
         </Typography>
-        <Typography className="mb-8 font-normal text-gray-500 text-center">
+        <Typography className="mb-8 font-medium text-gray-50 text-center tracking-wide">
           {description}
         </Typography>
         <a href={link} className="inline-block">

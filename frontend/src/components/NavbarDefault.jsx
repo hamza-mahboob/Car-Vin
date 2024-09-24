@@ -40,7 +40,7 @@ export function NavbarDefault() {
                     />
                 </svg>
 
-                <Link to={'/'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#8983ff]">
+                <Link to={'/'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
                     Home
                 </Link>
             </Typography>
@@ -64,7 +64,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/pricing'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#8983ff]">
+                <Link to={'/pricing'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
                     Pricing
                 </Link>
             </Typography>
@@ -86,7 +86,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/sampleReport'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#8983ff]">
+                <Link to={'/sampleReport'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
                     Sample Report
                 </Link>
             </Typography>
@@ -110,7 +110,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/orderCancel'} className="flex items-center text-white text-lg font-bold hover:underline hover:text-[#8983ff]">
+                <Link to={'/orderCancel'} className="flex items-center text-white text-lg font-bold  hover:underline hover:text-[#8983ff] transition-all duration-300">
                     Order Cancel
                 </Link>
             </Typography>
@@ -134,7 +134,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/policies'} className="flex items-center text-lg font-bold text-white hover:underline hover:text-[#8983ff]">
+                <Link to={'/policies'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
                     Policies
                 </Link>
             </Typography>

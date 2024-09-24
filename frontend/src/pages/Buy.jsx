@@ -1,4 +1,4 @@
-import { Option, Select, timeline } from '@material-tailwind/react';
+import { Option, Select, Spinner, timeline } from '@material-tailwind/react';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2'
@@ -12,6 +12,7 @@ export const Buy = () => {
         vin: '',
         package: '',
     });
+    const [loading, setLoading] = useState(false)
 
     const { state } = useLocation()
     const { title } = state || ''
@@ -33,10 +34,11 @@ export const Buy = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
         console.log(formState); // Handle form submission logic here
         //fetch request to buy package
         try {
-            const response = await fetch('http://carfaxchecks.test/api/package/purchase', {
+            const response = await fetch('http://localhost:8000/api/package/purchase', {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formState)
@@ -47,7 +49,17 @@ export const Buy = () => {
             if (response.ok) {
                 // navigate to vin car details
                 console.log(json)
-                navigate('/');
+                // navigate('/');
+                if (json.status.includes('CREATED')) {
+                    console.log('in created')
+                    window.location.href = json.url;
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong, payment did NOT complete",
+                    });
+                }
             }
 
 
@@ -64,6 +76,9 @@ export const Buy = () => {
             // console.log('fetch error')
 
         }
+        finally {
+            setLoading(false)
+        }
     };
 
     return (
@@ -79,6 +94,7 @@ export const Buy = () => {
                             id="floating_first_name"
                             className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
                             placeholder=" "
+                            autoComplete="off"
                             required
                             value={formState.firstName}
                             onChange={handleChange}
@@ -96,6 +112,7 @@ export const Buy = () => {
                             name="lastName"
                             id="floating_last_name"
                             className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                            autoComplete="off"
                             placeholder=" "
                             required
                             value={formState.lastName}
@@ -116,6 +133,7 @@ export const Buy = () => {
                         id="floating_email"
                         className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
                         placeholder=" "
+                        autoComplete="nope"
                         required
                         value={formState.email}
                         onChange={handleChange}
@@ -136,6 +154,7 @@ export const Buy = () => {
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
                             placeholder=" "
+                            autoComplete="nope"
                             required
                             value={formState.phone}
                             onChange={handleChange}
@@ -154,6 +173,7 @@ export const Buy = () => {
                         name="vin"
                         id="floating_vin"
                         className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                        autoComplete="off"
                         placeholder=" "
                         required
                         value={formState.vin}
@@ -167,17 +187,19 @@ export const Buy = () => {
                     </label>
                 </div>
                 <Select name='package' size="lg" label="Select Package" color='indigo' className='text-gray-100' onChange={handleChange} value={title}>
-                    <Option value="Basic Plan">Basic Plan</Option>
-                    <Option value="Standard Plan">Standard Plan</Option>
-                    <Option value="Premium Plan">Premium Plan</Option>
-                    <Option value="Enterprise Plan">Enterprise Plan</Option>
+                    <Option value="Basic Plan" className='text-gray-900'>Basic Plan</Option>
+                    <Option value="Standard Plan" className='text-gray-900'>Standard Plan</Option>
+                    <Option value="Premium Plan" className='text-gray-900'>Premium Plan</Option>
+                    <Option value="Enterprise Plan" className='text-gray-900'>Enterprise Plan</Option>
                 </Select>
                 <button
                     type="submit"
-                    className="text-white bg-[#8983ff] hover:bg-[#8983ff]/70 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 mt-10 md:mt-1 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="text-white disabled:bg-[#8983ff35] bg-[#8983ff] hover:bg-[#8983ff]/70 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 mt-10 md:mt-1 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    disabled={loading}
                 >
                     Next
                 </button>
+                {loading && <Spinner color="indigo" className="mx-auto h-10 w-10" />}
             </form>
         </div>
     );

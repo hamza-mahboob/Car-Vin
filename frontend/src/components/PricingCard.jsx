@@ -10,19 +10,15 @@ import { useNavigate } from "react-router-dom";
 
 function CheckIcon() {
     return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="h-3 w-3"
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l6 6 9-13.5"
-            />
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+            <linearGradient id="IMoH7gpu5un5Dx2vID39Ra_pIPl8tqh3igN_gr1" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9dffce"></stop><stop offset="1" stop-color="#50d18d"></stop></linearGradient><path fill="url(#IMoH7gpu5un5Dx2vID39Ra_pIPl8tqh3igN_gr1)" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><linearGradient id="IMoH7gpu5un5Dx2vID39Rb_pIPl8tqh3igN_gr2" x1="13" x2="36" y1="24.793" y2="24.793" gradientUnits="userSpaceOnUse"><stop offset=".824" stop-color="#135d36"></stop><stop offset=".931" stop-color="#125933"></stop><stop offset="1" stop-color="#11522f"></stop></linearGradient><path fill="url(#IMoH7gpu5un5Dx2vID39Rb_pIPl8tqh3igN_gr2)" d="M21.293,32.707l-8-8c-0.391-0.391-0.391-1.024,0-1.414l1.414-1.414	c0.391-0.391,1.024-0.391,1.414,0L22,27.758l10.879-10.879c0.391-0.391,1.024-0.391,1.414,0l1.414,1.414	c0.391,0.391,0.391,1.024,0,1.414l-13,13C22.317,33.098,21.683,33.098,21.293,32.707z"></path>
+        </svg>
+    );
+}
+function CrossIcon() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+            <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
         </svg>
     );
 }
@@ -30,7 +26,7 @@ function CheckIcon() {
 export function PricingCard({ price, title, features }) {
     const navigate = useNavigate()
     return (
-        <div className="wrapper w-full mx-auto max-w-[25rem] rounded-xl transition-all duration-500 hover:scale-105">
+        <div className="wrapper w-full mx-auto max-w-[25rem] rounded-xl transition-all duration-700 hover:scale-105">
             <div className="w-full">
                 <div className="inner rounded-xl">
                     <Card variant="filled" className="w-full mx-auto p-8 bg-gradient-to-r from-[#8983ff] to-[#5d55f0] shadow-2xl">
@@ -60,10 +56,9 @@ export function PricingCard({ price, title, features }) {
                             <ul className="flex flex-col gap-4 text-white">
                                 {features.map((feature, index) => (
                                     <li key={index} className="flex items-center gap-4">
-                                        <span className="rounded-full border border-white/20 bg-white/20 p-1">
-                                            <CheckIcon />
-                                        </span>
-                                        <Typography className="font-normal">{feature}</Typography>
+                                        {feature.included ? <CheckIcon /> : <CrossIcon />}
+                                        {/* <CrossIcon/> */}
+                                        <Typography className="font-normal">{feature.name}</Typography>
                                     </li>
                                 ))}
                             </ul>

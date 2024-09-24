@@ -5,67 +5,101 @@ const Pricing = () => {
     // Array of pricing plans with different values
     const pricingData = [
         {
-            price: '19',
-            title: 'Basic Plan',
+            price: '31.99',
+            title: 'Silver',
             features: [
-                'Ownership Costs',
-                'Accident Information',
-                'Market Value Range',
-                "Owner's History",
-                'Vehicle Specifications',
-                'Safety Recall Status',
-                'Online Listing History',
-                'Warranties',
-                'Salvage Information',
-                'Installed Equipment'
+                { name: 'Ownership Costs', included: true },
+                { name: 'Accident Information', included: true },
+                { name: 'Market Value Range', included: true },
+                { name: "Owner's History", included: true },
+                { name: 'Vehicle Specifications', included: false },
+                { name: 'Safety Recall Status', included: false },
+                { name: 'Online Listing History', included: false },
+                { name: 'Warranties', included: false },
+                { name: 'Salvage Information', included: false },
+                { name: 'Installed Equipment', included: false }
             ]
         },
         {
-            price: '29',
-            title: 'Standard Plan',
+            price: '54.99',
+            title: 'Gold',
             features: [
-                'Ownership Costs',
-                'Accident Information',
-                'Market Value Range',
-                "Owner's History",
-                'Vehicle Specifications',
-                'Safety Recall Status',
-                'Online Listing History',
-                'Warranties',
-                'Salvage Information',
-                'Installed Equipment'
+                { name: 'Ownership Costs', included: true },
+                { name: 'Accident Information', included: true },
+                { name: 'Market Value Range', included: true },
+                { name: "Owner's History", included: true },
+                { name: 'Vehicle Specifications', included: true },
+                { name: 'Safety Recall Status', included: true },
+                { name: 'Online Listing History', included: false },
+                { name: 'Warranties', included: false },
+                { name: 'Salvage Information', included: false },
+                { name: 'Installed Equipment', included: false }
             ]
         },
         {
-            price: '49',
-            title: 'Premium Plan',
+            price: '84.99',
+            title: 'Platinum',
             features: [
-                'Ownership Costs',
-                'Accident Information',
-                'Market Value Range',
-                "Owner's History",
-                'Vehicle Specifications',
-                'Safety Recall Status',
-                'Online Listing History',
-                'Warranties',
-                'Salvage Information',
-                'Installed Equipment'
+                { name: 'Ownership Costs', included: true },
+                { name: 'Accident Information', included: true },
+                { name: 'Market Value Range', included: true },
+                { name: "Owner's History", included: true },
+                { name: 'Vehicle Specifications', included: true },
+                { name: 'Safety Recall Status', included: true },
+                { name: 'Online Listing History', included: true },
+                { name: 'Warranties', included: true },
+                { name: 'Salvage Information', included: false },
+                { name: 'Installed Equipment', included: false }
             ]
         },
         {
-            price: '99',
-            title: 'Enterprise Plan',
+            price: '124.99',
+            title: 'Diamond Plan',
             features: [
-                'Ownership Costs',
-                'Accident Information',
-                'Market Value Range',
-                "Owner's History",
-                'Vehicle Specifications',
-                'Safety Recall Status',
-                'Online Listing History',
-                'Warranties',
-                'Salvage Information',
-                'Installed Equipment'
+                { name: 'Ownership Costs', included: true },
+                { name: 'Accident Information', included: true },
+                { name: 'Market Value Range', included: true },
+                { name: "Owner's History", included: true },
+                { name: 'Vehicle Specifications', included: true },
+                { name: 'Safety Recall Status', included: true },
+                { name: 'Online Listing History', included: true },
+                { name: 'Warranties', included: true },
+                { name: 'Salvage Information', included: true },
+                { name: 'Installed Equipment', included: false }
+            ]
+        },
+        {
+            price: '234.99',
+            title: 'Ruby Plan',
+            features: [
+                { name: '5 Vehicles Reports', included: true },
+                { name: 'Ownership Costs', included: true },
+                { name: 'Accident Information', included: true },
+                { name: 'Market Value Range', included: true },
+                { name: "Owner's History", included: true },
+                { name: 'Vehicle Specifications', included: true },
+                { name: 'Safety Recall Status', included: true },
+                { name: 'Online Listing History', included: true },
+                { name: 'Warranties', included: true },
+                { name: 'Salvage Information', included: true },
+                { name: 'Installed Equipment', included: true }
+            ]
+        },
+        {
+            price: '494.99',
+            title: 'Saphire Plan',
+            features: [
+                { name: '10 Vehicle Reports', included: true },
+                { name: 'Ownership Costs', included: true },
+                { name: 'Accident Information', included: true },
+                { name: 'Market Value Range', included: true },
+                { name: "Owner's History", included: true },
+                { name: 'Vehicle Specifications', included: true },
+                { name: 'Safety Recall Status', included: true },
+                { name: 'Online Listing History', included: true },
+                { name: 'Warranties', included: true },
+                { name: 'Salvage Information', included: true },
+                { name: 'Installed Equipment', included: true }
             ]
         },
     ];
@@ -73,7 +107,7 @@ const Pricing = () => {
     return (
         <div className='bg-blue-gray-50 py-32 h-auto'>
             <h1 className='text-5xl text-center font-semibold tracking-wider text-gray-900'>OUR PRICING</h1>
-            <div className="flex flex-wrap xl:flex-nowrap gap-10 p-5 w-full mt-8">
+            <div className="flex flex-wrap gap-5 gap-y-10 p-5 w-full lg:max-w-[100rem] mx-auto mt-8">
                 {pricingData.map((plan, index) => (
                     <PricingCard
                         key={index}

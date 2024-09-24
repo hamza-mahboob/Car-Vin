@@ -4,10 +4,52 @@ import Pricing from '../components/Pricing'
 import Welcome from '../components/Welcome'
 import Features from '../components/Features'
 import { Button } from '@material-tailwind/react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Home = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams(); // No need to use setSearchParams if not modifying
+  const { state } = useLocation()
+  let { msg } = state || ''
+
+  useEffect(() => {
+    const psParam = searchParams.get('ps');
+
+    if (msg && msg.includes('success')) {
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: "Cancel request submitted successfully",
+      });
+      msg = ''
+    } else if (msg && msg.includes('error')) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There was an error submitting the request",
+      });
+      msg = ''
+    }
+
+    if (psParam === 'true') {
+      console.log("Parameter 'ps' is true");
+      // logic for when ps is true
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: "Payment successful!",
+      });
+    } else if (psParam === 'false') {
+      console.log("Parameter 'ps' is false");
+      // Add logic for when ps is false
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Payment was unsuccessful!",
+      });
+    }
+  }, [searchParams]);
 
   const features = [
     { name: 'Free Photo', carvin: true, carfax: false, uvip: false, vehicleSnap: false },

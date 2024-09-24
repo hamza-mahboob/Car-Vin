@@ -1,7 +1,9 @@
-import React from 'react'
-import { Card, CardBody, Typography, Avatar } from "@material-tailwind/react";
+import React, { useState } from 'react'
+import { Card, CardBody, Typography, Avatar, Button } from "@material-tailwind/react";
 import Pricing from '../components/Pricing';
 import { useLocation } from 'react-router-dom';
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
+import PDFTable from '../components/PDFTable';
 
 const customers = [
     {
@@ -107,9 +109,22 @@ export const VinResultDisplay = () => {
     const { json } = state || {};
 
     return (
-        <>
+        <div className='bg-gradient-to-r from-[#1d1e22] to-[#393f4d]'>
             {/* {console.log(json)} */}
-            <div className="h-screen pt-20 pb-20 flex items-center justify-center p-5 rounded-2xl">
+            <div className="h-screen pt-24 pb-10 md:pb-20 flex flex-col items-center justify-center p-5 rounded-2xl">
+
+                <PDFDownloadLink
+                    document={json && <PDFTable json={json} />}
+                    fileName="Vin Details.pdf"
+                    className='self-end my-2'
+                >
+                    {({ loading }) => (
+                        <Button color='indigo' className='hover:bg-[#8983ff]/90'>
+                            {loading ? 'Loading...' : 'Download PDF'}
+                        </Button>
+                    )}
+                </PDFDownloadLink>
+
                 {/* <Card className="w-full m-10 bg-indigo-200 p-2 h-5/6">
                     <CardBody>
                         <div className="mb-4 flex items-center justify-between">
@@ -140,7 +155,7 @@ export const VinResultDisplay = () => {
                         </div>
                     </CardBody>
                 </Card> */}
-                <Card className={`h-full w-full ${json && 'overflow-y-scroll'} overflow-x-hidden p-5 mt-20`}>
+                <Card className={`h-full w-full ${json && 'overflow-y-scroll'} overflow-x-hidden p-5 mt-5 md:mt-20`}>
                     <table className="w-full table-fixed min-w-max text-left">
                         <tbody>
                             <h1 className="text-3xl w-full md:text-5xl font-semibold m-5 text-[#8983ff] tracking-wider" style={{ fontFamily: "Dancing Script" }}>
@@ -168,9 +183,9 @@ export const VinResultDisplay = () => {
                         </tbody>
                     </table>
                 </Card>
-
             </div>
+
             <Pricing />
-        </>
+        </div>
     )
 }
