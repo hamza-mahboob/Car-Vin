@@ -38,7 +38,7 @@ export const Buy = () => {
         console.log(formState); // Handle form submission logic here
         //fetch request to buy package
         try {
-            const response = await fetch('http://localhost:8000/api/package/purchase', {
+            const response = await fetch(`${import.meta.env.VITE_ROUTE}/api/package/purchase`, {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formState)

@@ -66,8 +66,10 @@ const Home = () => {
   const CheckIcon = () => <span className="text-green-500">✔</span>;
   const CrossIcon = () => <span className="text-red-500">✘</span>;
 
+
   return (
     <>
+      {/* {console.log(import.meta.env.VITE_ROUTE, 'my key')} */}
       <CarouselTransition />
       <Pricing />
       <Welcome />

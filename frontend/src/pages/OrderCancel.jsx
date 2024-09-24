@@ -32,7 +32,7 @@ export const OrderCancel = () => {
         console.log(formState); // Handle form submission logic here
         //fetch request for cancellation of order
         try {
-            const response = await fetch('http://localhost:8000/api/cancelrequest', {
+            const response = await fetch(`${import.meta.env.VITE_ROUTE}/api/cancelrequest`, {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formState)

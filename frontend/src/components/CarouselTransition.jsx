@@ -18,7 +18,7 @@ export function CarouselTransition() {
     setDisabled(true)
 
     try {
-      const response = await fetch('http://localhost:8000/api/vin/info', {
+      const response = await fetch(`${import.meta.env.VITE_ROUTE}/api/vin/info`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(input)
