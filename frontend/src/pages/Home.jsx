@@ -113,7 +113,7 @@ const Home = () => {
       </div>
 
       {/* Table check */}
-      <div className='bg-gray-300 min-h-[45rem] py-20'>
+    <div className='bg-gray-300 min-h-[45rem] py-20 px-2'>
         <h1 className='text-center text-5xl text-[#8983ff] tracking-tight font-semibold'><span className='underline'>CARFAXCHECKS</span> VS CarFax & Others</h1>
         <h3 className='text-center text-md font-normal px-2 tracking-wide text-[#8983ff] mt-12'>Do not overpay Choose Autoswift the service you can easily rely on</h3>
         <h3 className="text-gray-600 text-center my-3 px-2 w-full md:w-1/2 mx-auto">We have seen it and answering to it, Feel like you’re being ripped off by Carfax? It’s an open secret that their vehicle history reports are costly and contain only basic information</h3>

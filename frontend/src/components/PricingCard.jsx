@@ -48,8 +48,7 @@ export function PricingCard({ price, title, features }) {
                                 color="white"
                                 className="mt-6 flex justify-center gap-1 text-7xl font-normal"
                             >
-                                <span className="mt-2 text-4xl">$</span>{price}{" "}
-                                <span className="self-end text-4xl">/mo</span>
+                                <span className="mt-2 text-4xl font-medium lg:text-6xl text-gray-50" style={{fontFamily:"Montserrat"}}>${price}/</span>
                             </Typography>
                         </CardHeader>
                         <CardBody className="p-0">

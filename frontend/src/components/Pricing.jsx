@@ -54,7 +54,7 @@ const Pricing = () => {
         },
         {
             price: '124.99',
-            title: 'Diamond Plan',
+            title: 'Diamond',
             features: [
                 { name: 'Ownership Costs', included: true },
                 { name: 'Accident Information', included: true },
@@ -70,7 +70,7 @@ const Pricing = () => {
         },
         {
             price: '234.99',
-            title: 'Ruby Plan',
+            title: 'Ruby',
             features: [
                 { name: '5 Vehicles Reports', included: true },
                 { name: 'Ownership Costs', included: true },
@@ -87,7 +87,7 @@ const Pricing = () => {
         },
         {
             price: '494.99',
-            title: 'Saphire Plan',
+            title: 'Saphire',
             features: [
                 { name: '10 Vehicle Reports', included: true },
                 { name: 'Ownership Costs', included: true },
@@ -105,7 +105,7 @@ const Pricing = () => {
     ];
 
     return (
-        <div className='bg-blue-gray-50 py-32 h-auto'>
+        <div className='bg-indigo-50 py-32 h-auto'>
             <h1 className='text-5xl text-center font-semibold tracking-wider text-gray-900'>OUR PRICING</h1>
             <div className="flex flex-wrap gap-5 gap-y-10 p-5 w-full lg:max-w-[100rem] mx-auto mt-8">
                 {pricingData.map((plan, index) => (

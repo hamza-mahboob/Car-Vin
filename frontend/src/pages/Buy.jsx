@@ -38,7 +38,7 @@ export const Buy = () => {
         console.log(formState); // Handle form submission logic here
         //fetch request to buy package
         try {
-            const response = await fetch(`${import.meta.env.VITE_ROUTE}/api/package/purchase`, {
+            const response = await fetch(`https://carfaxchecks.com/api/package/purchase`, {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formState)
@@ -82,9 +82,9 @@ export const Buy = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center py-20 md:py-0 bg-gradient-to-r from-[#1d1e22] to-[#393f4d]">
-            <h1 className="text-4xl md:text-7xl my-10 text-white font-bold tracking-wider" style={{ fontFamily: "Dancing Script" }}>Buy Package</h1>
-            <h2 className="text-4xl md:text-5xl my-10 text-white font-normal" style={{ fontFamily: "Dancing Script" }}>Your Information</h2>
+        <div className="min-h-screen flex flex-col justify-center items-center py-20 xl:py-40 bg-gradient-to-r from-[#1d1e22] to-[#393f4d]">
+            <h1 className="text-4xl xl:text-7xl my-10 text-white font-bold tracking-wider" style={{ fontFamily: "Dancing Script" }}>Buy Package</h1>
+            <h2 className="text-4xl xl:text-5xl my-10 text-white font-normal" style={{ fontFamily: "Dancing Script" }}>Your Information</h2>
             <form className="max-w-2xl w-3/4 md:w-full mx-auto flex flex-col gap-5" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 md:gap-5">
                     <div className="relative z-0 w-full mb-5 group">
@@ -187,10 +187,12 @@ export const Buy = () => {
                     </label>
                 </div>
                 <Select name='package' size="lg" label="Select Package" color='indigo' className='text-gray-100' onChange={handleChange} value={title}>
-                    <Option value="Basic Plan" className='text-gray-900'>Basic Plan</Option>
-                    <Option value="Standard Plan" className='text-gray-900'>Standard Plan</Option>
-                    <Option value="Premium Plan" className='text-gray-900'>Premium Plan</Option>
-                    <Option value="Enterprise Plan" className='text-gray-900'>Enterprise Plan</Option>
+                    <Option value="Silver" className='text-gray-900'>Silver Plan</Option>
+                    <Option value="Gold" className='text-gray-900'>Gold Plan</Option>
+                    <Option value="Platinum" className='text-gray-900'>Platinum Plan</Option>
+                    <Option value="Diamond" className='text-gray-900'>Diamond Plan</Option>
+                    <Option value="Ruby" className='text-gray-900'>Ruby Plan</Option>
+                    <Option value="Saphire" className='text-gray-900'>Saphire Plan</Option>
                 </Select>
                 <button
                     type="submit"
