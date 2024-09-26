@@ -20,7 +20,7 @@ const customers = [
     },
     {
         name: "Model:",
-        details: 'null',
+        details: '2014',
     },
     {
         name: "Model year:",
@@ -116,7 +116,7 @@ export const VinResultDisplay = () => {
                 <PDFDownloadLink
                     document={json && <PDFTable json={json} />}
                     fileName="Vin Details.pdf"
-                    className='self-end my-2'
+                    className='self-end my-0 lg:my-1 lg:mt-2'
                 >
                     {({ loading }) => (
                         <Button color='indigo' className='hover:bg-[#8983ff]/90'>
@@ -155,25 +155,27 @@ export const VinResultDisplay = () => {
                         </div>
                     </CardBody>
                 </Card> */}
-                <Card className={`h-full w-full ${json && 'overflow-y-scroll'} overflow-x-hidden p-5 mt-5 md:mt-20`}>
+                <Card className={`h-full w-full ${json && 'overflow-y-scroll'} overflow-x-hidden p-5 mt-5 lg:mt-2`}>
                     <table className="w-full table-fixed min-w-max text-left">
                         <tbody>
-                            <h1 className="text-3xl w-full md:text-5xl font-semibold m-5 text-[#8983ff] tracking-wider" style={{ fontFamily: "Dancing Script" }}>
+                            <h1 className="text-3xl w-full md:text-5xl font-semibold m-5 text-[#8983ff] tracking-wider" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>
                                 Vin Details
                             </h1>
                             {json && json.map(({ name, details }) => (
-                                <tr key={name} className="even:bg-[#8983ff]/20 odd:bg-[#8983ff]/50">
-                                    <td className="p-4 rounded-l-md">
-                                        <Typography variant="h5" color="blue-gray" className="font-normal">
-                                            {name}
-                                        </Typography>
-                                    </td>
-                                    <td className="p-4 rounded-r-md">
-                                        <Typography variant="h5" color="blue-gray" className="font-normal truncate">
-                                            {details}
-                                        </Typography>
-                                    </td>
-                                </tr>
+                                (details ?
+                                    <tr key={name} className="even:bg-[#8983ff]/20 odd:bg-[#8983ff]/50">
+                                        <td className="p-4 rounded-l-md">
+                                            <Typography variant="h5" color="blue-gray" className="font-normal break-words">
+                                                {name}
+                                            </Typography>
+                                        </td>
+                                        <td className="p-4 rounded-r-md">
+                                            <Typography variant="h5" color="blue-gray" className="font-normal break-words">
+                                                {details}
+                                            </Typography>
+                                        </td>
+                                    </tr> : <></>
+                                )
                             ))}
                             {!json && (
                                 <h1 className="text-red-500 mx-auto text-xl md:text-2xl text-center">

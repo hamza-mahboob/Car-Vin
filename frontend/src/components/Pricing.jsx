@@ -106,7 +106,7 @@ const Pricing = () => {
 
     return (
         <div className='bg-indigo-50 py-32 h-auto'>
-            <h1 className='text-5xl text-center font-semibold tracking-wider text-gray-900'>OUR PRICING</h1>
+            <h1 className='text-5xl text-center font-semibold tracking-wider text-gray-900' style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 500, fontStyle: 'normal' }}>OUR PRICING</h1>
             <div className="flex flex-wrap gap-5 gap-y-10 p-5 w-full lg:max-w-[100rem] mx-auto mt-8">
                 {pricingData.map((plan, index) => (
                     <PricingCard

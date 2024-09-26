@@ -21,7 +21,7 @@ export function HorizontalCard({ image, title, subtitle, description, link }) {
         />
       </CardHeader>
       <CardBody className="items-center justify-center flex flex-col">
-        <Typography variant="h6" className="mb-4 uppercase text-2xl text-gray-500">
+        <Typography variant="h6" className="mb-4 uppercase text-2xl text-gray-50">
           {subtitle}
         </Typography>
         <Typography variant="h4" color="white" className="my-9 text-center md:text-start text-2xl md:text-4xl">

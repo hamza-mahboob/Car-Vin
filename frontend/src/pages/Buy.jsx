@@ -83,8 +83,8 @@ export const Buy = () => {
 
     return (
         <div className="min-h-screen flex flex-col justify-center items-center py-20 xl:py-40 bg-gradient-to-r from-[#1d1e22] to-[#393f4d]">
-            <h1 className="text-4xl xl:text-7xl my-10 text-white font-bold tracking-wider" style={{ fontFamily: "Dancing Script" }}>Buy Package</h1>
-            <h2 className="text-4xl xl:text-5xl my-10 text-white font-normal" style={{ fontFamily: "Dancing Script" }}>Your Information</h2>
+            <h1 className="text-4xl xl:text-7xl my-10 text-white font-bold tracking-wider" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>Buy Package</h1>
+            <h2 className="text-4xl xl:text-5xl my-10 text-white font-normal" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>Your Information</h2>
             <form className="max-w-2xl w-3/4 md:w-full mx-auto flex flex-col gap-5" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 md:gap-5">
                     <div className="relative z-0 w-full mb-5 group">
@@ -148,10 +148,10 @@ export const Buy = () => {
                 <div className="grid md:grid-cols-1 md:gap-5">
                     <div className="relative z-0 w-full md:mb-5 group">
                         <input
-                            type="tel"
+                            type="number"
                             name="phone"
                             id="floating_phone"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+
                             className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
                             placeholder=" "
                             autoComplete="nope"
@@ -163,7 +163,7 @@ export const Buy = () => {
                             htmlFor="floating_phone"
                             className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-[#8983ff] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
-                            Phone number (123-456-7890)
+                            Phone number
                         </label>
                     </div>
                 </div>

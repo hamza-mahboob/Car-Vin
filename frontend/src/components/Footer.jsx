@@ -8,11 +8,11 @@ const LINKS = [
     },
     {
         title: "Useful links",
-        items: [["Cancel Order",'/orderCancel']],
+        items: [["Cancel Order", '/orderCancel']],
     },
     {
         title: "Contact Info",
-        items: [["+92 123-918-2323",''],['info@gmail.com','']],
+        items: [['jamessmith2468@carfaxchecks.com', '']],
     },
 ];
 
@@ -31,7 +31,7 @@ export function Footer() {
                             We are more than just VIN reports, we’re your trusted partners in unveiling the hidden stories behind every vehicle. Discover the untold narratives with us.
                         </Typography>
                     </div>
-                    <div className="grid grid-cols-4 justify-between gap-8">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 justify-between gap-8">
                         {LINKS.map(({ title, items }) => (
                             <ul key={title}>
                                 <Typography
@@ -46,10 +46,10 @@ export function Footer() {
                                         <Typography
                                             as="a"
                                             color="white"
-                                            className="py-1.5 font-normal transition-colors hover:text-[#5d55f0]"
+                                            className="py-1.5 font-normal transition-colors hover:text-[#5d55f0] overflow-hidden whitespace-normal break-words"
                                         >
                                             <Link to={link[1]}>
-                                                {link[0]}
+                                                <h3 className="whitespace-normal break-words">{link[0]}</h3>
                                             </Link>
                                         </Typography>
                                     </li>

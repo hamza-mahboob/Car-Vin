@@ -53,7 +53,7 @@ export function CarouselTransition() {
     <>
       <div className="absolute top-1/3 left-1/8 px-10 w-full md:left-1/4 md:w-1/2 flex items-center justify-center z-40">
         <div className="w-full h-auto bg-black opacity-[0.92] rounded-2xl p-4 flex flex-col justify-center">
-          <h1 className="text-3xl text-white text-center my-5">Enter VIN number</h1>
+          <h1 className="text-3xl text-white text-center my-5" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>Enter VIN number</h1>
           <div className="h-10 w-3/4 mx-auto placeholder:text-xl placeholder:p-3 rounded my-4">
             <Input color="white" size="lg" label="VIN Number..." variant="standard" onChange={handleChange} value={input} />
           </div>

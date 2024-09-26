@@ -3,7 +3,7 @@ import React from 'react'
 export const Policies = () => {
     return (
         <div className=" min-h-screen mx-auto px-5 md:px-10 lg:px-20 xl:px-40 py-8 text-gray-100 tracking-wide leading-relaxed pt-40 bg-gradient-to-r from-[#1d1e22] to-[#393f4d]">
-            <h1 className="text-6xl font-bold mb-4 text-[#8983ff]" style={{fontFamily:"Dancing Script"}}>Privacy Policy</h1>
+            <h1 className="text-6xl font-bold mb-4 text-[#8983ff]" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>Privacy Policy</h1>
 
             <p className="mb-4 mt-10">
                 This privacy policy sets out how our website uses and protects any information that you give us when you use

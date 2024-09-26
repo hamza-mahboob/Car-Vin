@@ -13,6 +13,41 @@ const Home = () => {
   const { state } = useLocation()
   let { msg } = state || ''
 
+
+  useEffect(() => {
+    // Check if Tawk script is already loaded
+    if (!window.Tawk_API) {
+      // Dynamically load the Tawk script if not already present
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://embed.tawk.to/66f4875de5982d6c7bb45d51/1i8lj1i3q';
+      script.charset = 'UTF-8';
+      script.setAttribute('crossorigin', '*');
+
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        console.log('Tawk script loaded');
+      };
+    } else {
+      // If Tawk_API already exists, just make the widget visible again
+      if (window.Tawk_API && window.Tawk_API.onLoaded) {
+        window.Tawk_API.showWidget(); // Ensure the widget shows up again if it's already loaded
+        // window.Tawk_API.maximize()
+      }
+    }
+
+    // Cleanup function when component unmounts
+    return () => {
+      // Hide the widget but keep the state intact
+      if (window.Tawk_API && window.Tawk_API.hideWidget) {
+        window.Tawk_API.minimize()
+        window.Tawk_API.hideWidget();
+      }
+    };
+  }, []);
+
+
   useEffect(() => {
     const psParam = searchParams.get('ps');
 
@@ -80,15 +115,15 @@ const Home = () => {
         <div className="absolute inset-0 bg-[url(https://picsum.photos/1920/1080)] bg-cover bg-center bg-fixed" />
 
         {/* Centered Content */}
-        <div className="relative flex flex-col items-center justify-center h-full z-10 text-white">
-          <h1 className="text-6xl text-center font-semibold mb-4 uppercase text-[#534aff]">CarFax Check</h1>
-          <h2 className="text-4xl text-center font-semibold uppercase">Save Yourself Thousands With A Comprehensive <br /> Vehicle History Report!</h2>
+        <div className="relative flex flex-col items-center justify-center h-full z-10 text-white px-3">
+          <h1 className="text-5xl lg:text-6xl text-center font-semibold mb-4 uppercase text-[#534aff]">CarFax Check</h1>
+          <h2 className="text-3xl lg:text-4xl text-center font-semibold uppercase">Save Yourself Thousands With A Comprehensive <br /> Vehicle History Report!</h2>
         </div>
       </div>
 
       {/* Why choose us */}
       <div className='min-h-[45rem] pt-20 bg-gray-100'>
-        <h1 className='text-center text-4xl md:text-6xl text-[#8983ff] font-semibold tracking-normal mb-10'>
+        <h1 className='text-center text-3xl md:text-6xl text-[#8983ff] font-semibold tracking-normal mb-10'>
           WHY CHOOSE US
         </h1>
         <div className='flex flex-col md:flex-row items-center justify-center mx-auto gap-x-10 gap-y-5'>
@@ -113,8 +148,8 @@ const Home = () => {
       </div>
 
       {/* Table check */}
-    <div className='bg-gray-300 min-h-[45rem] py-20 px-2'>
-        <h1 className='text-center text-5xl text-[#8983ff] tracking-tight font-semibold'><span className='underline'>CARFAXCHECKS</span> VS CarFax & Others</h1>
+    <div className='bg-gray-300 min-h-[45rem] py-20 px-3 lg:px-2'>
+        <h1 className='text-center text-3xl ld:text-5xl text-[#8983ff] tracking-tight font-semibold'><span className='underline'>CARFAXCHECKS</span> VS CarFax & Others</h1>
         <h3 className='text-center text-md font-normal px-2 tracking-wide text-[#8983ff] mt-12'>Do not overpay Choose Autoswift the service you can easily rely on</h3>
         <h3 className="text-gray-600 text-center my-3 px-2 w-full md:w-1/2 mx-auto">We have seen it and answering to it, Feel like you’re being ripped off by Carfax? It’s an open secret that their vehicle history reports are costly and contain only basic information</h3>
 
@@ -146,7 +181,7 @@ const Home = () => {
 
       {/* For your info */}
       <div className='min-h-[45rem] flex flex-col md:flex-row max-w-screen-xl mx-auto justify-center items-center mt-20 p-2'>
-        <h1 className='text-4xl tracking-tighter w-full md:w-1/3 font-bold text-center md:text-start mb-10'>FOR YOUR INFO</h1>
+        <h1 className='text-3xl lg:text-4xl text-[#7f78f9] tracking-tighter w-full md:w-1/3 font-bold text-center md:text-start mb-10'>FOR YOUR INFO</h1>
         <div className='w-full md:w-2/3 p-2 grid grid-cols-2 gap-10 text-gray-700 tracking-wider'>
           <div>
             <h1 className='mb-5 text-xl text-[#8983ff] font-semibold'>01 Total Recall</h1>

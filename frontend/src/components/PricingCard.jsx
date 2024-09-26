@@ -37,7 +37,7 @@ export function PricingCard({ price, title, features }) {
                             className="m-0 mb-8 rounded-none border-b border-white/10 pb-8 text-center"
                         >
                             <Typography
-                                variant="small"
+                                variant="h5"
                                 color="white"
                                 className="font-normal uppercase"
                             >
