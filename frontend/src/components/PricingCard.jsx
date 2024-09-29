@@ -39,9 +39,16 @@ export function PricingCard({ price, title, features }) {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-normal uppercase"
+                                className="font-normal tracking-wider uppercase"
                             >
                                 {title} {/* Displaying the title */}
+                            </Typography>
+                            <Typography
+                                variant="small"
+                                color="white"
+                                className="font-normal tracking-wide"
+                            >
+                                Delivery Duration: 1-2 Hours
                             </Typography>
                             <Typography
                                 variant="h1"

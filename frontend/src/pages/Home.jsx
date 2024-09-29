@@ -74,7 +74,7 @@ const Home = () => {
       Swal.fire({
         icon: "success",
         title: "Success!",
-        text: "Payment successful! The data will be provided to you within 30-40 days.",
+        text: "Payment successful! The data will be sent to you via email.",
       });
     } else if (psParam === 'false') {
       console.log("Parameter 'ps' is false");

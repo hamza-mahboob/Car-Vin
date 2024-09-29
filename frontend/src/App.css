@@ -68,7 +68,7 @@
 }
 
 .inner {
-  max-height: 12rem;
+  max-height: 13rem;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 }
