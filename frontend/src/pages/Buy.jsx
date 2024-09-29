@@ -21,6 +21,68 @@ export const Buy = () => {
         formState.package = title
     }, [])
 
+    useEffect(() => {
+        Swal.fire({
+            title: 'Terms and Conditions',
+            html: `
+              <div class="terms-content">
+                <h3>Non-Refundable Payment Policy</h3>
+                <p><strong>Effective Date:</strong> ${new Date().toLocaleDateString()}</p>
+                <p>At CarFaxChecks, we provide comprehensive car history reports to our valued customers. To ensure clarity and transparency, we outline our non-refundable payment policy below.</p>
+                
+                <h4>Policy Statement:</h4>
+                <p>All payments made for car history reports on our website are non-refundable. Once a report is purchased, the customer acknowledges that they have read and agreed to this policy.</p>
+        
+                <h4>Reasons for Non-Refundability:</h4>
+                <ul>
+                  <li>Instant Access: Our reports are generated instantly upon payment, providing immediate access to valuable information.</li>
+                  <li>Irreversible Data Retrieval: Our system incurs costs to retrieve and process data for each report.</li>
+                  <li>Customized Reports: Each report is tailored to the specific vehicle identification number (VIN) or license plate number provided.</li>
+                </ul>
+        
+                <h4>Exceptions:</h4>
+                <p>No exceptions will be made to this policy, including but not limited to:</p>
+                <ul>
+                  <li>Reports containing inaccurate information (customers are encouraged to contact our support team for corrections)</li>
+                  <li>Duplicate reports or unintended purchases</li>
+                </ul>
+        
+                <h4>Customer Acknowledgement:</h4>
+                <p>By completing a purchase on our website, customers acknowledge that they:</p>
+                <ul>
+                  <li>Understand the non-refundable nature of the payment</li>
+                  <li>Agree to the terms and conditions outlined in this policy</li>
+                  <li>Have reviewed and accepted our website's terms of service and privacy policy</li>
+                </ul>
+        
+                <h4>Support and Dispute Resolution:</h4>
+                <p>If you have concerns or issues with your report, please contact our support team at jamessmith2468@carfaxchecks.com. We will address your inquiry promptly.</p>
+        
+                <h4>Changes to This Policy:</h4>
+                <p>We reserve the right to update or modify this policy at any time without prior notice.</p>
+        
+                <h4>Acceptance:</h4>
+                <p>By using our website and purchasing a report, you confirm your acceptance of this non-refundable payment policy.</p>
+              </div>
+              <br>
+              <input type="checkbox" id="agreeCheckbox"> I agree to terms and conditions
+            `,
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#4c51bf', // Indigo color for OK button
+            preConfirm: () => {
+              if (!document.getElementById('agreeCheckbox').checked) {
+                Swal.showValidationMessage('You need to agree to the terms and conditions to proceed.');
+                return false;
+              }
+            },
+            allowOutsideClick: false,
+            customClass: {
+              popup: 'swal-modal',
+              htmlContainer: 'swal-content',
+            },
+          });
+    }, [])
+
     // Handle input changes
     const handleChange = (e) => {
         const name = e.target ? e.target.name : 'package'; // If target exists, use the native event. Otherwise, it's for Select.

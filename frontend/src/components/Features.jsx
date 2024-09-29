@@ -1,30 +1,34 @@
 import React from 'react';
 import { HorizontalCard } from './HorizontalCard';
+import pic1 from '../assets/1.jpg'
+import pic2 from '../assets/2.jpg'
+import pic3 from '../assets/3.jpg'
+import pic4 from '../assets/4.jpg'
 
 const cardData = [
     {
-        image: `https://picsum.photos/200/300?random=${Math.floor((Math.random() * 10))}`,
+        image: pic1,
         title: "Comprehensive Data",
         subtitle: "01",
         description: "Our reports compile data from various trusted sources, providing you with a comprehensive overview of your vehicle's history, including maintenance records, ownership history, and more...",
         link: "#"
     },
     {
-        image: `https://picsum.photos/200/300?random=${Math.floor((Math.random() * 10))}`,
+        image: pic2,
         title: "User Friendly",
         subtitle: "02",
         description: "Our user-friendly platform allows you to easily access and interpret your VIN report. No technical expertise required – just enter your VIN and let us handle the rest.",
         link: "#"
     },
     {
-        image: `https://picsum.photos/200/300?random=${Math.floor((Math.random() * 10))}`,
+        image: pic3,
         title: "Why Choose Our VIN Report",
         subtitle: "03",
         description: "Reveal your vehicle's past. Utilize VIN for informed choices. Access transparency and confidence with our reports.",
         link: "#"
     },
     {
-        image: `https://picsum.photos/200/300?random=${Math.floor((Math.random() * 10))}`,
+        image: pic4,
         title: "Easy Procedure",
         subtitle: "04",
         description: "Uncover hidden vehicle history through detailed VIN reports, aiding informed decisions for buyers, sellers, and enthusiasts.",

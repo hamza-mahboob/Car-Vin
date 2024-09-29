@@ -1,98 +1,98 @@
 .loader {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car__body {
+  animation: shake 0.2s ease-in-out infinite alternate;
+}
+
+.car__line {
+  transform-origin: center right;
+  stroke-dasharray: 22;
+  animation: line 0.8s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+.car__line--top {
+  animation-delay: 0s;
+}
+
+.car__line--middle {
+  animation-delay: 0.2s;
+}
+
+.car__line--bottom {
+  animation-delay: 0.4s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(-1%);
   }
-  
-  .car__body {
-    animation: shake 0.2s ease-in-out infinite alternate;
+  100% {
+    transform: translateY(3%);
   }
-  
-  .car__line {
-    transform-origin: center right;
-    stroke-dasharray: 22;
-    animation: line 0.8s ease-in-out infinite;
-    animation-fill-mode: both;
-   
-  }
-  
-  .car__line--top {
-    animation-delay: 0s;
-  }
-  
-  .car__line--middle {
-    animation-delay: 0.2s;
-  }
-  
-  .car__line--bottom {
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes shake {
-    0% {
-      transform: translateY(-1%);
-    }
-    100% {
-      transform: translateY(3%);
-    }
-  }
-  
-  @keyframes line {
-    0% {
-      stroke-dashoffset: 22;
-    }
-  
-    25% {
-      stroke-dashoffset: 22;
-    }
-  
-    50% {
-      stroke-dashoffset: 0;
-    }
-  
-    51% {
-      stroke-dashoffset: 0;
-    }
-  
-    80% {
-      stroke-dashoffset: -22;
-    }
-  
-    100% {
-      stroke-dashoffset: -22;
-    }
-  }
-  
-  .wrapper {
-    display: flex;
-  }
-  
-  .inner {
-    max-height: 12rem;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-  }
-  
-  .wrapper .inner:hover {
-    max-height: 100%;
+}
+
+@keyframes line {
+  0% {
+    stroke-dashoffset: 22;
   }
 
-  html, body {
-    overflow-x: hidden;
-  }
-  body {
-    position: relative
+  25% {
+    stroke-dashoffset: 22;
   }
 
-  /* Autofill style */
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  51% {
+    stroke-dashoffset: 0;
+  }
+
+  80% {
+    stroke-dashoffset: -22;
+  }
+
+  100% {
+    stroke-dashoffset: -22;
+  }
+}
+
+.wrapper {
+  display: flex;
+}
+
+.inner {
+  max-height: 12rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.wrapper .inner:hover {
+  max-height: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+
+/* Autofill style */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-    -webkit-text-fill-color: whitesmoke !important; /* Ensure text remains whitesmoke */
-    caret-color: whitesmoke !important; /* Ensure caret color remains whitesmoke */
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: whitesmoke !important; /* Ensure text remains whitesmoke */
+  caret-color: whitesmoke !important; /* Ensure caret color remains whitesmoke */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 input:-webkit-autofill:hover,
@@ -101,16 +101,16 @@ select:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill:focus,
 select:-webkit-autofill:focus {
-    -webkit-text-fill-color: whitesmoke !important; /* Ensure text stays whitesmoke on focus */
-    caret-color: whitesmoke !important; /* Keep caret white on hover and focus */
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-    border: 1px solid inherit !important;
+  -webkit-text-fill-color: whitesmoke !important; /* Ensure text stays whitesmoke on focus */
+  caret-color: whitesmoke !important; /* Keep caret white on hover and focus */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  border: 1px solid inherit !important;
 }
 
 input:-webkit-autofill:active,
 textarea:-webkit-autofill:active,
 select:-webkit-autofill:active {
-    -webkit-text-fill-color: whitesmoke !important; /* Ensures text stays whitesmoke on active state */
+  -webkit-text-fill-color: whitesmoke !important; /* Ensures text stays whitesmoke on active state */
 }
 
 .poppins-thin {
@@ -229,7 +229,83 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* Full height modal */
+.swal-modal {
+  height: 90vh; /* Full height */
+  width: 50%;
+  background-color: #e0e7ff; /* Light indigo background */
+  color: #1e3a8a; /* Dark indigo text */
+  padding: 2rem; /* Padding for the modal */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollable content */
+.swal-content {
+  max-height: 70vh; /* Limit content height to 70% of viewport */
+  background-color: #fafbffc4;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  text-align: left; /* Left-align text for better readability */
+  border-radius: 2%;
+}
+
+/* Style for terms content */
+.terms-content h3,
+.terms-content h4 {
+  margin-bottom: 1rem; /* Space below headings */
+  font-weight: 900;
+}
+
+.terms-content p,
+.terms-content ul {
+  margin-bottom: 1rem; /* Space below paragraphs and lists */
+  line-height: 1.6; /* Better line height for readability */
+}
+
+#agreeCheckbox {
+  border-radius: 10%;
+}
+
+/* Optional: Customize checkbox styling (if needed) */
+#agreeCheckbox {
+  accent-color: #4c51bf; /* Indigo accent color for checkbox */
+}
+
+.terms-content {
+  text-align: left;
+}
+
+.swal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .swal-modal {
+    width: 80%; /* Reduce width on tablets */
+    height: 80vh; /* Adjust height for smaller screens */
+    padding: 1.5rem; /* Reduce padding */
+  }
+  
+  .swal-content {
+    max-height: 60vh; /* Adjust content height */
+  }
+}
+
+@media (max-width: 480px) {
+  .swal-modal {
+    width: 95%; /* Almost full width on small screens */
+    height: 70vh; /* Reduce height for phones */
+    padding: 1rem; /* Further reduce padding */
+  }
+  
+  .swal-content {
+    max-height: 50vh; /* Further reduce content height */
+  }
+}
+
 

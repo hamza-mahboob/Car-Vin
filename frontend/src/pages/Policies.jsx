@@ -118,8 +118,8 @@ export const Policies = () => {
                     incorrect.
                 </li>
             </ul>
-
-            <p className="mb-4">
+            <h1 className='text-xl'><span className='font-bold'>Note! </span>The payment for the purchased package will be non-refundable.</h1>
+            <p className="my-4">
                 This privacy policy is subject to change without notice.
             </p>
         </div>

@@ -146,12 +146,13 @@ export function NavbarDefault() {
             <div className="mx-auto flex items-center justify-between text-white">
                 <Typography
                     as="a"
-                    href="/"
                     className="mr-4 cursor-pointer py-1.5 font-bold text-3xl lg:text-5xl tracking-widest text-[#8983ff]"
                     style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}
                 >
                     {/* <img src="https://carvinscheck.com/wp-content/themes/carvinscheck/assets/img/main/logo.png" className="w-52" alt="" /> */}
-                    CarFaxChecks
+                    <Link to={'/'}>
+                        CarFaxChecks
+                    </Link>
                 </Typography>
                 <div className="hidden lg:block">{navList}</div>
                 <div className="flex items-center gap-x-1">

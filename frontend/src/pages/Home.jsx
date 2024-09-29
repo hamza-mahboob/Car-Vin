@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import { Button } from '@material-tailwind/react'
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import pic5 from '../assets/5.jpg'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ const Home = () => {
       Swal.fire({
         icon: "success",
         title: "Success!",
-        text: "Payment successful!",
+        text: "Payment successful! The data will be provided to you within 30-40 days.",
       });
     } else if (psParam === 'false') {
       console.log("Parameter 'ps' is false");
@@ -112,12 +113,16 @@ const Home = () => {
       {/* car vins check */}
       <div className="relative overflow-hidden h-screen">
         {/* Fixed Background Section */}
-        <div className="absolute inset-0 bg-[url(https://picsum.photos/1920/1080)] bg-cover bg-center bg-fixed" />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed object-contain"
+          style={{ backgroundImage: `url(${pic5})` }}
+        />
+
 
         {/* Centered Content */}
-        <div className="relative flex flex-col items-center justify-center h-full z-10 text-white px-3">
+        <div className="relative flex flex-col items-center justify-center h-full z-10 px-3">
           <h1 className="text-5xl lg:text-6xl text-center font-semibold mb-4 uppercase text-[#534aff]">CarFax Check</h1>
-          <h2 className="text-3xl lg:text-4xl text-center font-semibold uppercase">Save Yourself Thousands With A Comprehensive <br /> Vehicle History Report!</h2>
+          <h2 className="text-3xl lg:text-4xl text-center font-semibold uppercase text-gray-50">Save Yourself Thousands With A Comprehensive <br /> Vehicle History Report!</h2>
         </div>
       </div>
 
@@ -148,7 +153,7 @@ const Home = () => {
       </div>
 
       {/* Table check */}
-    <div className='bg-gray-300 min-h-[45rem] py-20 px-3 lg:px-2'>
+      <div className='bg-gray-300 min-h-[45rem] py-20 px-3 lg:px-2'>
         <h1 className='text-center text-3xl ld:text-5xl text-[#8983ff] tracking-tight font-semibold'><span className='underline'>CARFAXCHECKS</span> VS CarFax & Others</h1>
         <h3 className='text-center text-md font-normal px-2 tracking-wide text-[#8983ff] mt-12'>Do not overpay Choose Autoswift the service you can easily rely on</h3>
         <h3 className="text-gray-600 text-center my-3 px-2 w-full md:w-1/2 mx-auto">We have seen it and answering to it, Feel like you’re being ripped off by Carfax? It’s an open secret that their vehicle history reports are costly and contain only basic information</h3>
