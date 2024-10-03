@@ -70,13 +70,15 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-center text-gray-50 text-2xl lg:mt-12 uppercase tracking-wide font-semibold">
+
+                {/* <div className="text-center text-gray-50 text-2xl lg:mt-12 uppercase tracking-wide font-semibold">
                     <h1>AUTHENTIC & RELIABLE VEHICLE HISTORY REPORT</h1>
                     <div className="h-20 w-full flex gap-5 items-center justify-center my-2 ">
                         <img src={usaFlag} className="w-32 rounded" />
                         <img src={canadaFlag} className="w-32 rounded" />
                     </div>
-                </div>
+                </div> */}
+                
                 <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
                     <Typography
                         variant="small"
