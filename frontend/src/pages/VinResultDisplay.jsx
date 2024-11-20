@@ -119,7 +119,7 @@ export const VinResultDisplay = () => {
                     className='self-end my-0 lg:my-1 lg:mt-2'
                 >
                     {({ loading }) => (
-                        <Button color='indigo' className='hover:bg-[#8983ff]/90'>
+                        <Button color='indigo' className='hover:bg-[#990011]/90'>
                             {loading ? 'Loading...' : 'Download PDF'}
                         </Button>
                     )}
@@ -158,12 +158,12 @@ export const VinResultDisplay = () => {
                 <Card className={`h-full w-full ${json && 'overflow-y-scroll'} overflow-x-hidden p-5 mt-5 lg:mt-2`}>
                     <table className="w-full table-fixed min-w-max text-left">
                         <tbody>
-                            <h1 className="text-3xl w-full md:text-5xl font-semibold m-5 text-[#8983ff] tracking-wider" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>
+                            <h1 className="text-3xl w-full md:text-5xl font-semibold m-5 text-[#990011] tracking-wider" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>
                                 Vin Details
                             </h1>
                             {json && json.map(({ name, details }) => (
                                 (details ?
-                                    <tr key={name} className="even:bg-[#8983ff]/20 odd:bg-[#8983ff]/50">
+                                    <tr key={name} className="even:bg-[#990011]/20 odd:bg-[#990011]/50">
                                         <td className="p-4 rounded-l-md">
                                             <Typography variant="h5" color="blue-gray" className="font-normal break-words">
                                                 {name}

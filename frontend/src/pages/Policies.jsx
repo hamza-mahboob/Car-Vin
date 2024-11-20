@@ -3,7 +3,7 @@ import React from 'react'
 export const Policies = () => {
     return (
         <div className=" min-h-screen mx-auto px-5 md:px-10 lg:px-20 xl:px-40 py-8 text-gray-100 tracking-wide leading-relaxed pt-40 bg-gradient-to-r from-[#1d1e22] to-[#393f4d]">
-            <h1 className="text-6xl font-bold mb-4 text-[#8983ff]" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>Privacy Policy</h1>
+            <h1 className="text-6xl font-bold mb-4 text-[#990011]" style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}>Privacy Policy</h1>
 
             <p className="mb-4 mt-10">
                 This privacy policy sets out how our website uses and protects any information that you give us when you use
@@ -11,7 +11,7 @@ export const Policies = () => {
                 website.
             </p>
 
-            <h2 className="text-2xl font-bold mb-2 text-[#8983ff]">Information We Collect</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#990011]">Information We Collect</h2>
 
             <p className="mb-4">
                 We may collect the following information:
@@ -22,7 +22,7 @@ export const Policies = () => {
                 <li>Other information relevant to customer surveys and/or offers</li>
             </ul>
 
-            <h2 className="text-2xl font-bold mb-2 text-[#8983ff]">How We Use the Information</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#990011]">How We Use the Information</h2>
 
             <p className="mb-4">
                 We require this information to understand your needs and provide you with a better service, and in
@@ -44,7 +44,7 @@ export const Policies = () => {
                     interests.</li>
             </ul>
 
-            <h2 className="text-2xl font-bold mb-2 text-[#8983ff]">Security</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#990011]">Security</h2>
 
             <p className="mb-4">
                 We are committed to ensuring that your information is secure. In order to prevent unauthorized access or
@@ -53,7 +53,7 @@ export const Policies = () => {
                 information we collect online.
             </p>
 
-            <h2 className="text-2xl font-bold mb-2 text-[#8983ff]">Cookies</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#990011]">Cookies</h2>
 
             <p className="mb-4">
                 A cookie is a small file that asks permission to be placed on your computer's hard drive. Once you agree,
@@ -76,7 +76,7 @@ export const Policies = () => {
                 the data you choose to share with us.
             </p>
 
-            <h2 className="text-2xl font-bold mb-2 text-[#8983ff]">Links to Other Websites</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#990011]">Links to Other Websites</h2>
 
             <p className="mb-4">
                 Our website may contain links to other websites of interest. However, once you have used these links to
@@ -93,7 +93,7 @@ export const Policies = () => {
                 the website in question.
             </p>
 
-            <h2 className="text-2xl font-bold mb-2 text-[#8983ff]">Controlling Your Personal Information</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#990011]">Controlling Your Personal Information</h2>
 
             <p className="mb-4">
                 You may choose to restrict the collection or use of your personal information in the following ways:

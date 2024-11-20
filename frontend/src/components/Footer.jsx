@@ -48,7 +48,7 @@ export function Footer() {
                                         <Typography
                                             as="a"
                                             color="white"
-                                            className="py-1.5 font-normal transition-colors hover:text-[#5d55f0] overflow-hidden whitespace-normal break-words"
+                                            className="py-1.5 font-normal transition-colors hover:text-[#990011] overflow-hidden whitespace-normal break-words"
                                         >
                                             <Link to={link[1]}>
                                                 <h3 className="whitespace-normal break-words">{link[0]}</h3>

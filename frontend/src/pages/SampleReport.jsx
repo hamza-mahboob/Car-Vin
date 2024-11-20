@@ -85,7 +85,7 @@ export const SampleReport = () => {
               className=''>
 
               {({ loading }) => (
-                <Button color='indigo' className='hover:bg-[#8983ff]/90'>
+                <Button color='indigo' className='hover:bg-[#990011]/90'>
                   {loading ? 'Loading...' : 'Download PDF'}
                 </Button>
               )}

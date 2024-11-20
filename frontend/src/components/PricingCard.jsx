@@ -29,7 +29,7 @@ export function PricingCard({ price, title, features }) {
         <div className="wrapper w-full mx-auto max-w-[25rem] rounded-xl transition-all duration-700 hover:scale-105">
             <div className="w-full">
                 <div className="inner rounded-xl">
-                    <Card variant="filled" className="w-full mx-auto p-8 bg-gradient-to-r from-[#8983ff] to-[#5d55f0] shadow-2xl">
+                    <Card variant="filled" className="w-full mx-auto p-8 bg-gradient-to-br from-[#990011] to-[#990011]/70 shadow-2xl">
                         <CardHeader
                             floated={false}
                             shadow={false}

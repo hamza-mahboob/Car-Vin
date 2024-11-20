@@ -19,6 +19,7 @@ export const Buy = () => {
 
     useEffect(() => {
         formState.package = title
+        // console.log(formState)
     }, [])
 
     // useEffect(() => {
@@ -29,24 +30,24 @@ export const Buy = () => {
     //             <h3>Non-Refundable Payment Policy</h3>
     //             <p><strong>Effective Date:</strong> ${new Date().toLocaleDateString()}</p>
     //             <p>At CarFaxChecks, we provide comprehensive car history reports to our valued customers. To ensure clarity and transparency, we outline our non-refundable payment policy below.</p>
-                
+
     //             <h4>Policy Statement:</h4>
     //             <p>All payments made for car history reports on our website are non-refundable. Once a report is purchased, the customer acknowledges that they have read and agreed to this policy.</p>
-        
+
     //             <h4>Reasons for Non-Refundability:</h4>
     //             <ul>
     //               <li>Instant Access: Our reports are generated instantly upon payment, providing immediate access to valuable information.</li>
     //               <li>Irreversible Data Retrieval: Our system incurs costs to retrieve and process data for each report.</li>
     //               <li>Customized Reports: Each report is tailored to the specific vehicle identification number (VIN) or license plate number provided.</li>
     //             </ul>
-        
+
     //             <h4>Exceptions:</h4>
     //             <p>No exceptions will be made to this policy, including but not limited to:</p>
     //             <ul>
     //               <li>Reports containing inaccurate information (customers are encouraged to contact our support team for corrections)</li>
     //               <li>Duplicate reports or unintended purchases</li>
     //             </ul>
-        
+
     //             <h4>Customer Acknowledgement:</h4>
     //             <p>By completing a purchase on our website, customers acknowledge that they:</p>
     //             <ul>
@@ -54,13 +55,13 @@ export const Buy = () => {
     //               <li>Agree to the terms and conditions outlined in this policy</li>
     //               <li>Have reviewed and accepted our website's terms of service and privacy policy</li>
     //             </ul>
-        
+
     //             <h4>Support and Dispute Resolution:</h4>
     //             <p>If you have concerns or issues with your report, please contact our support team at jamessmith2468@carfaxchecks.com. We will address your inquiry promptly.</p>
-        
+
     //             <h4>Changes to This Policy:</h4>
     //             <p>We reserve the right to update or modify this policy at any time without prior notice.</p>
-        
+
     //             <h4>Acceptance:</h4>
     //             <p>By using our website and purchasing a report, you confirm your acceptance of this non-refundable payment policy.</p>
     //           </div>
@@ -82,7 +83,7 @@ export const Buy = () => {
     //         },
     //       });
     // }, [])
-    
+
 
     // Handle input changes
     const handleChange = (e) => {
@@ -155,7 +156,7 @@ export const Buy = () => {
                             type="text"
                             name="firstName"
                             id="floating_first_name"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#990011] peer"
                             placeholder=" "
                             autoComplete="off"
                             required
@@ -164,7 +165,7 @@ export const Buy = () => {
                         />
                         <label
                             htmlFor="floating_first_name"
-                            className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-[#8983ff] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                            className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-gray-50 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
                             First name
                         </label>
@@ -174,7 +175,7 @@ export const Buy = () => {
                             type="text"
                             name="lastName"
                             id="floating_last_name"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#990011] peer"
                             autoComplete="off"
                             placeholder=" "
                             required
@@ -183,7 +184,7 @@ export const Buy = () => {
                         />
                         <label
                             htmlFor="floating_last_name"
-                            className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-[#8983ff] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                            className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-gray-50 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
                             Last name
                         </label>
@@ -194,7 +195,7 @@ export const Buy = () => {
                         type="email"
                         name="email"
                         id="floating_email"
-                        className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#990011] peer"
                         placeholder=" "
                         autoComplete="nope"
                         required
@@ -203,7 +204,7 @@ export const Buy = () => {
                     />
                     <label
                         htmlFor="floating_email"
-                        className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-[#8983ff] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-gray-50 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
                         Email address
                     </label>
@@ -215,7 +216,7 @@ export const Buy = () => {
                             name="phone"
                             id="floating_phone"
 
-                            className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#990011] peer"
                             placeholder=" "
                             autoComplete="nope"
                             required
@@ -224,7 +225,7 @@ export const Buy = () => {
                         />
                         <label
                             htmlFor="floating_phone"
-                            className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-[#8983ff] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                            className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-gray-50 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
                             Phone number
                         </label>
@@ -235,7 +236,7 @@ export const Buy = () => {
                         type="text"
                         name="vin"
                         id="floating_vin"
-                        className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#8983ff] peer"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#990011] peer"
                         autoComplete="off"
                         placeholder=" "
                         required
@@ -244,22 +245,23 @@ export const Buy = () => {
                     />
                     <label
                         htmlFor="floating_vin"
-                        className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-[#8983ff] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        className="peer-focus:font-medium absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-gray-50 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
                         VIN Number
                     </label>
                 </div>
-                <Select name='package' size="lg" label="Select Package" color='indigo' className='text-gray-100' onChange={handleChange} value={title}>
+                <Select name='package' size="lg" label="Select Package" color='red' className='text-gray-100' onChange={handleChange} value={title}>
+                    {/* <Option value="Standard" className='text-gray-900'>Standard Plan</Option> */}
                     <Option value="Silver" className='text-gray-900'>Silver Plan</Option>
                     <Option value="Gold" className='text-gray-900'>Gold Plan</Option>
                     <Option value="Platinum" className='text-gray-900'>Platinum Plan</Option>
-                    <Option value="Diamond" className='text-gray-900'>Diamond Plan</Option>
-                    <Option value="Ruby" className='text-gray-900'>Ruby Plan</Option>
-                    <Option value="Saphire" className='text-gray-900'>Saphire Plan</Option>
+                    {/* <Option value="Diamond" className='text-gray-900'>Diamond Plan</Option> */}
+                    {/* <Option value="Ruby" className='text-gray-900'>Ruby Plan</Option> */}
+                    {/* <Option value="Saphire" className='text-gray-900'>Saphire Plan</Option>  */}
                 </Select>
                 <button
                     type="submit"
-                    className="text-white disabled:bg-[#8983ff35] bg-[#8983ff] hover:bg-[#8983ff]/70 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 mt-10 md:mt-1 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="text-white disabled:bg-[#8983ff35] bg-[#990011] hover:bg-[#990011]/70 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 mt-10 md:mt-1 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     disabled={loading}
                 >
                     Next

@@ -8,7 +8,7 @@ import {
 
 export function HorizontalCard({ image, title, subtitle, description, link }) {
   return (
-    <Card className="w-full max-w-[48rem] min-h-[30rem] flex-row bg-[#8983ff] shadow-2xl">
+    <Card className="w-full max-w-[48rem] min-h-[30rem] flex-row bg-[#990011] shadow-2xl">
       <CardHeader
         shadow={false}
         floated={false}

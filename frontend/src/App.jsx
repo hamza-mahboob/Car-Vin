@@ -29,7 +29,7 @@ function App() {
           <svg className="car" width="204" height="80" viewBox="0 0 102 40" xmlns="http://www.w3.org/2000/svg" >
             <g
               transform="translate(2 1)"
-              stroke="#5d55f0"
+              stroke="#990011"
               fill="none"
               fillRule="evenodd"
               strokeLinecap="round"
@@ -77,7 +77,7 @@ function App() {
           </svg>
         </div>
         :
-        < div className='h-screen' >
+        <div className='h-screen antialiased'>
           <ScrollToTop />
           <NavbarDefault />
           <Routes>
@@ -90,7 +90,7 @@ function App() {
             <Route path='/buy' element={<Buy />} />
           </Routes>
           <Footer />
-        </div >}
+        </div>}
     </>
   )
 }

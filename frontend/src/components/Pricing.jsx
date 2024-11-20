@@ -4,6 +4,22 @@ import { PricingCard } from './PricingCard';
 const Pricing = () => {
     // Array of pricing plans with different values
     const pricingData = [
+        // {
+        //     price: '34.99',
+        //     title: 'Standard',
+        //     features: [
+        //         { name: 'Ownership Costs', included: true },
+        //         { name: 'Accident Information', included: true },
+        //         { name: 'Market Value Range', included: true },
+        //         { name: "Owner's History", included: true },
+        //         { name: 'Vehicle Specifications', included: false },
+        //         { name: 'Safety Recall Status', included: false },
+        //         { name: 'Online Listing History', included: false },
+        //         { name: 'Warranties', included: false },
+        //         { name: 'Salvage Information', included: false },
+        //         { name: 'Installed Equipment', included: false }
+        //     ]
+        // },
         {
             price: '31.99',
             title: 'Silver',
@@ -52,56 +68,56 @@ const Pricing = () => {
                 { name: 'Installed Equipment', included: false }
             ]
         },
-        {
-            price: '124.99',
-            title: 'Diamond',
-            features: [
-                { name: 'Ownership Costs', included: true },
-                { name: 'Accident Information', included: true },
-                { name: 'Market Value Range', included: true },
-                { name: "Owner's History", included: true },
-                { name: 'Vehicle Specifications', included: true },
-                { name: 'Safety Recall Status', included: true },
-                { name: 'Online Listing History', included: true },
-                { name: 'Warranties', included: true },
-                { name: 'Salvage Information', included: true },
-                { name: 'Installed Equipment', included: false }
-            ]
-        },
-        {
-            price: '234.99',
-            title: 'Ruby',
-            features: [
-                { name: '5 Vehicles Reports', included: true },
-                { name: 'Ownership Costs', included: true },
-                { name: 'Accident Information', included: true },
-                { name: 'Market Value Range', included: true },
-                { name: "Owner's History", included: true },
-                { name: 'Vehicle Specifications', included: true },
-                { name: 'Safety Recall Status', included: true },
-                { name: 'Online Listing History', included: true },
-                { name: 'Warranties', included: true },
-                { name: 'Salvage Information', included: true },
-                { name: 'Installed Equipment', included: true }
-            ]
-        },
-        {
-            price: '494.99',
-            title: 'Saphire',
-            features: [
-                { name: '10 Vehicle Reports', included: true },
-                { name: 'Ownership Costs', included: true },
-                { name: 'Accident Information', included: true },
-                { name: 'Market Value Range', included: true },
-                { name: "Owner's History", included: true },
-                { name: 'Vehicle Specifications', included: true },
-                { name: 'Safety Recall Status', included: true },
-                { name: 'Online Listing History', included: true },
-                { name: 'Warranties', included: true },
-                { name: 'Salvage Information', included: true },
-                { name: 'Installed Equipment', included: true }
-            ]
-        },
+        // {
+        //     price: '124.99',
+        //     title: 'Diamond',
+        //     features: [
+        //         { name: 'Ownership Costs', included: true },
+        //         { name: 'Accident Information', included: true },
+        //         { name: 'Market Value Range', included: true },
+        //         { name: "Owner's History", included: true },
+        //         { name: 'Vehicle Specifications', included: true },
+        //         { name: 'Safety Recall Status', included: true },
+        //         { name: 'Online Listing History', included: true },
+        //         { name: 'Warranties', included: true },
+        //         { name: 'Salvage Information', included: true },
+        //         { name: 'Installed Equipment', included: false }
+        //     ]
+        // },
+        // {
+        //     price: '234.99',
+        //     title: 'Ruby',
+        //     features: [
+        //         { name: '5 Vehicles Reports', included: true },
+        //         { name: 'Ownership Costs', included: true },
+        //         { name: 'Accident Information', included: true },
+        //         { name: 'Market Value Range', included: true },
+        //         { name: "Owner's History", included: true },
+        //         { name: 'Vehicle Specifications', included: true },
+        //         { name: 'Safety Recall Status', included: true },
+        //         { name: 'Online Listing History', included: true },
+        //         { name: 'Warranties', included: true },
+        //         { name: 'Salvage Information', included: true },
+        //         { name: 'Installed Equipment', included: true }
+        //     ]
+        // },
+        // {
+        //     price: '494.99',
+        //     title: 'Saphire',
+        //     features: [
+        //         { name: '10 Vehicle Reports', included: true },
+        //         { name: 'Ownership Costs', included: true },
+        //         { name: 'Accident Information', included: true },
+        //         { name: 'Market Value Range', included: true },
+        //         { name: "Owner's History", included: true },
+        //         { name: 'Vehicle Specifications', included: true },
+        //         { name: 'Safety Recall Status', included: true },
+        //         { name: 'Online Listing History', included: true },
+        //         { name: 'Warranties', included: true },
+        //         { name: 'Salvage Information', included: true },
+        //         { name: 'Installed Equipment', included: true }
+        //     ]
+        // },
     ];
 
     return (

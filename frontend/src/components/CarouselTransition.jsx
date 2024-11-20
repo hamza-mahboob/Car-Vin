@@ -58,7 +58,7 @@ export function CarouselTransition() {
             <Input color="white" size="lg" label="VIN Number..." variant="standard" onChange={handleChange} value={input} />
           </div>
           <h1 className="my-4 text-center text-gray-500 font-medium">Example: 1GTG6CEN0L1139305</h1>
-          <Button variant="filled" className="mt-10 w-40  mx-auto text-white bg-[#8983ff] hover:bg-[#5b52fe] transition-all duration-500" onClick={handleClick} disabled={disabled}>Decode</Button>
+          <Button variant="filled" className="mt-10 w-40  mx-auto text-white hover:text-gray-900 bg-[#990011] hover:bg-[#FCF6F5] transition-all duration-500" onClick={handleClick} disabled={disabled}>Decode</Button>
           {disabled && <Spinner color="indigo" className="mx-auto my-5 h-10 w-10" />}
         </div>
       </div>

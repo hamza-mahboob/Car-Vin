@@ -40,7 +40,7 @@ export function NavbarDefault() {
                     />
                 </svg>
 
-                <Link to={'/'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
+                <Link to={'/'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-gray-400 transition-all duration-300">
                     Home
                 </Link>
             </Typography>
@@ -64,7 +64,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/pricing'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
+                <Link to={'/pricing'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-gray-400 transition-all duration-300">
                     Pricing
                 </Link>
             </Typography>
@@ -86,7 +86,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/sampleReport'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
+                <Link to={'/sampleReport'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-gray-400 transition-all duration-300">
                     Sample Report
                 </Link>
             </Typography>
@@ -110,7 +110,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/orderCancel'} className="flex items-center text-white text-lg font-bold  hover:underline hover:text-[#8983ff] transition-all duration-300">
+                <Link to={'/orderCancel'} className="flex items-center text-white text-lg font-bold  hover:underline hover:text-gray-400 transition-all duration-300">
                     Order Cancel
                 </Link>
             </Typography>
@@ -134,7 +134,7 @@ export function NavbarDefault() {
                         fill="#90A4AE"
                     />
                 </svg>
-                <Link to={'/policies'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-[#8983ff] transition-all duration-300">
+                <Link to={'/policies'} className="flex items-center text-lg font-bold text-white  hover:underline hover:text-gray-400 transition-all duration-300">
                     Policies
                 </Link>
             </Typography>
@@ -142,12 +142,12 @@ export function NavbarDefault() {
     );
 
     return (
-        <Navbar className="mx-auto w-full px-4 py-2 lg:px-8 lg:py-4 bg-black border-none opacity-[0.98] fixed top-0 z-50" fullWidth={true}>
+        <Navbar className="mx-auto w-full px-4 py-2 lg:px-8 lg:py-4 bg-gradient-to-r from-[#990011]/40 to-[#990011] border-none opacity-100 fixed top-0 z-50" fullWidth={true}>
             <div className="mx-auto flex items-center justify-between text-white">
                 <Typography
                     as="a"
-                    className="mr-4 cursor-pointer py-1.5 font-bold text-3xl lg:text-5xl tracking-widest text-[#8983ff]"
-                    style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: 'normal' }}
+                    className="mr-4 cursor-pointer py-1.5 font-bold text-3xl lg:text-5xl tracking-widest text-red-600"
+                    style={{ fontFamily: "Roboto Condensed", fontOpticalSizing: "auto", fontWeight: 600, fontStyle: 'normal' }}
                 >
                     {/* <img src="https://carvinscheck.com/wp-content/themes/carvinscheck/assets/img/main/logo.png" className="w-52" alt="" /> */}
                     <Link to={'/'}>
@@ -159,7 +159,7 @@ export function NavbarDefault() {
                     {/* <Button
                     
                         size="sm"
-                        className="hidden lg:inline-block bg-[#8983ff] hover:bg-opacity-70"
+                        className="hidden lg:inline-block bg-[#990011] hover:bg-opacity-70"
                     >
                         <span className="text-gray-950">Contact Us</span>
                     </Button> */}
@@ -206,7 +206,7 @@ export function NavbarDefault() {
                 <div className="container mx-auto z-50">
                     {navList}
                     {/* <div className="flex items-center gap-x-1">
-                        <Button fullWidth  size="sm" className="bg-[#8983ff]">
+                        <Button fullWidth  size="sm" className="bg-[#990011]">
                             <span>Contact Us</span>
                         </Button>
                     </div> */}
